@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.grails.plugins:cache:4.0.0.RC1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/cache/4.0.0.RC1/16b2fd04fbd2b2be7981f49b0679e36a0987979d/cache-4.0.0.RC1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/cache/4.0.0.RC1/2841fe17574c831cb695b43c87e6219854b59ec2/cache-4.0.0.RC1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

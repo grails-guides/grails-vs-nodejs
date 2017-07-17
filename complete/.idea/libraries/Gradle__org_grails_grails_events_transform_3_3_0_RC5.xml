@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.grails:grails-events-transform:3.3.0.RC5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-events-transform/3.3.0.RC5/a121182a5b683f084621f4ea6bc3f7dad5582445/grails-events-transform-3.3.0.RC5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-events-transform/3.3.0.RC5/a9160a5a12271d8099b4840a20ad8f55a605e2b1/grails-events-transform-3.3.0.RC5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

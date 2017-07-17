@@ -69,9 +69,11 @@ grails:
         encoding: UTF-8
 
 ---
+#tag::cors[]
 grails:
     cors:
         enabled: true
+#end::cors[]
 ---
 hibernate:
     cache:
@@ -87,9 +89,25 @@ dataSource:
 
 environments:
     development:
+#tag::ssl[]
+#        server:
+#            port: 8443
+#            ssl:              #HTTPS configuration
+#                enabled: true
+#                key-store: /Users/sdelamo/git/grailsguides/grails-vs-nodejs/complete/certificates/keystore.p12
+#                key-store-password: password
+#                keyStoreType: PKCS12
+#                keyAlias: tomcat
+#end::ssl[]
+#tag::postgres[]
         dataSource:
             dbCreate: create-drop
-            url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+            driverClassName: org.postgresql.Driver
+            dialect: org.hibernate.dialect.PostgreSQLDialect
+            username: postgres
+            password:
+            url: jdbc:postgresql://localhost:5432/ice_cream_db_2
+#end::postgres[]
     test:
         dataSource:
             dbCreate: update
@@ -116,3 +134,56 @@ environments:
                 testOnReturn: false
                 jdbcInterceptors: ConnectionState
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
+---
+#tag::springsecurity[]
+grails:
+    plugin:
+        springsecurity:
+            userLookup:
+                userDomainClassName: demo.User
+                authorityJoinClassName: demo.UserRole
+            authority:
+                className: demo.Role
+            rest:
+                login:
+                    endpointUrl: /login
+            useSecurityEventListener: true
+            controllerAnnotations:
+                staticRules: 
+                    -
+                        pattern: /stomp/**
+                        access:
+                            - permitAll
+                    -
+                        pattern: /signup/**
+                        access:
+                            - permitAll
+            filterChain:
+                chainMap:
+                    - # Stateless chain
+                        pattern: /**
+                        filters: 'JOINED_FILTERS,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter,-rememberMeAuthenticationFilter'
+#end::springsecurity[]
+---
+#tag::allowedOrigin[]
+allowedOrigin: https://localhost:3000 # accepted origin URL for websocket connections
+timeout:
+    minutes: 1 #config setting for timeout
+#end::allowedOrigin[]
+---
+
+environments:
+    test:
+        grails:
+            plugin:
+                springsecurity:
+                    rest:
+                        login:
+                            endpointUrl: /api/login
+---
+#tag::hyphenated[]
+#grails:
+#    web:
+#        url:
+#            converter: hyphenated
+#end::hyphenated[]

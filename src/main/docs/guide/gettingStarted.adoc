@@ -1,1 +1,25 @@
-In this guide you are going to...
+This guide shows how to transition an application from a technology stack such as:
+
+image::technologystack_node.png[]
+
+to: 
+
+image::technologystack_grails.png[]
+
+We are going to use the REACT + Node.js application described by https://github.com/mvolkmann[Mark Volkmann] in his post https://objectcomputing.com/resources/publications/sett/april-2017-web-app-step-by-step[Web App Step by Step, April 2017 issue of SETT]. In that post, he laid out a
+detailed blueprint for developing a modern web application, from beginning to end. He used a front-end built in REACT and a backend built with Node/express which consumed a PostgresSQL database. 
+
+In this guide, we will demonstrate how to develop
+the same web app, using the Grails framework. The only explicit
+technology change we will be making will be the use of Grails over
+Node/express for the backend - otherwise we will use the same stack,
+including React and PostgresSQL. However, we will see how Grails
+simplifies and accelerates the development process and makes developers
+more productive without giving up finer grain control where needed.
+
+The emphasis of this guide will not be so much learning how the
+“innards” of how web applications work, but rather on _developer
+productivity_. In addition, we will refer readers to Mark’s article for
+details on the implementation of the React application, as there we will
+be using almost the exact same code (any changes will be highlighted and
+explained).

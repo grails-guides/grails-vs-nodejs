@@ -13,7 +13,7 @@ buildscript {
 }
 
 version "0.1"
-group "demo"
+group "solution"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
@@ -54,12 +54,26 @@ dependencies {
     runtime "com.h2database:h2"
     runtime "org.apache.tomcat:tomcat-jdbc"
     testCompile "org.grails:grails-gorm-testing-support"
-    testCompile "org.grails:grails-plugin-testing"
-    testCompile "org.grails.plugins:geb"
     testCompile "org.grails:grails-datastore-rest-client"
     testCompile "org.grails:grails-web-testing-support"
+
+    testCompile "org.grails.plugins:geb"
     testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
+
+    //tag::postgresDependency[]
+    runtime 'org.postgresql:postgresql:9.4.1212'
+    //end::postgresDependency[]
+
+    //tag::securityDependency[]
+    compile 'org.grails.plugins:spring-security-core:3.2.0.M1'
+    compile "org.grails.plugins:spring-security-rest:2.0.0.M2"
+    //end::securityDependency[]
+
+    //tag::websocketDependency[]
+    compile 'org.grails.plugins:grails-spring-websocket:2.3.0'
+    //end::websocketDependency[]
+
 }
 
 bootRun {
