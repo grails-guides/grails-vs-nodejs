@@ -1,5 +1,5 @@
 Now that we have our basic application structure, its’s time to set up
-our database. We are trying to migrate a https://objectcomputing.com/resources/publications/sett/april-2017-web-app-step-by-step[REACT + Node/express application] which used PostgreSQL.
+our database. We are trying to migrate a https://objectcomputing.com/resources/publications/sett/april-2017-web-app-step-by-step[React + Node/express application] which used PostgreSQL.
 However, it’s worth noting that Grails has already set up a basic
 datasource for us, in the form on an in-memory H2 database. This
 database is destroyed and recreated every time the app is run, and it

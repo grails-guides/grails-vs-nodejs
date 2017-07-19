@@ -1,6 +1,6 @@
 === Signup
 
-To signup into the application the REACT app sends a _POST_ request to the _/signup_ endpoint. 
+To signup into the application the React app sends a _POST_ request to the _/signup_ endpoint.
 It includes a JSON  Payload containing username and password. We are going to map this with Grails. 
 
 First, we register the endpoint in URLMappings by adding the next line into the mappings:

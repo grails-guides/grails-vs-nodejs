@@ -6,8 +6,8 @@ to:
 
 image::technologystack_grails.png[]
 
-We are going to use the REACT + Node.js application described by https://github.com/mvolkmann[Mark Volkmann] in his post https://objectcomputing.com/resources/publications/sett/april-2017-web-app-step-by-step[Web App Step by Step, April 2017 issue of SETT]. In that post, he laid out a
-detailed blueprint for developing a modern web application, from beginning to end. He used a front-end built in REACT and a backend built with Node/express which consumed a PostgresSQL database. 
+We are going to use the React + Node.js application described by https://github.com/mvolkmann[Mark Volkmann] in his post https://objectcomputing.com/resources/publications/sett/april-2017-web-app-step-by-step[Web App Step by Step, April 2017 issue of SETT]. In that post, he laid out a
+detailed blueprint for developing a modern web application, from beginning to end. He used a front-end built in React and a backend built with Node/express which consumed a PostgresSQL database.
 
 In this guide, we will demonstrate how to develop
 the same web app, using the Grails framework. The only explicit

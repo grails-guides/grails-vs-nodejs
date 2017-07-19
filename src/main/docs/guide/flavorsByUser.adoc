@@ -1,7 +1,7 @@
 When the logs into the application or inmediately after signup, app he is presented with a list of his
 favourite flavors. 
 
-To fetch those flavors, the REACT app sends a _GET_ request to the _/ice-cream/$username_ endpoint. 
+To fetch those flavors, the React app sends a _GET_ request to the _/ice-cream/$username_ endpoint.
 We are going to map this with Grails. 
 
 First, we register the endpoint in URLMappings by adding the next line into the mappings:

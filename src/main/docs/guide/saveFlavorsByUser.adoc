@@ -1,6 +1,6 @@
 A user can add a flavor from his profile. 
 
-To do that, the REACT app sends a _POST_ request to the _/ice-cream/$username_ endpoint. 
+To do that, the React app sends a _POST_ request to the _/ice-cream/$username_ endpoint.
 
 We are going to map this with Grails. 
 
