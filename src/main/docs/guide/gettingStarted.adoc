@@ -1,10 +1,10 @@
 This guide shows how to transition an application from a technology stack such as:
 
-image::technologystack_node.png[]
+image::technologystack_node.png[width=400]
 
 to: 
 
-image::technologystack_grails.png[]
+image::technologystack_grails.png[width=400]
 
 We are going to use the React + Node.js application described by https://github.com/mvolkmann[Mark Volkmann] in the https://objectcomputing.com/resources/publications/sett[SETT] article https://objectcomputing.com/resources/publications/sett/april-2017-web-app-step-by-step[Web App Step by Step, April 2017 issue of SETT]. The article laid out a
 detailed blueprint for developing a modern web application from beginning to end. The sample project in this article featured a React frontend and a Node/express.jsbackend, backed by PostgresSQL database. The project included several advanced features, including WebSockets and HTTPS.
